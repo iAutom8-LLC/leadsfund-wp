@@ -61,6 +61,20 @@ register_activation_hook( __FILE__, 'activate_iautom8_cc' );
 register_deactivation_hook( __FILE__, 'deactivate_iautom8_cc' );
 
 /**
+ * Plugin update checker
+ */
+require 'includes/puc/plugin-update-checker.php';
+
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+    'https://github.com/iAutom8-LLC/leadsfund-wp/',
+    __FILE__,
+    'leadsfund'
+);
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('stable');
+
+/**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
