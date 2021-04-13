@@ -1,0 +1,30 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.widget-wrapper {
+    position: relative;
+}
+
+.btn-copy {
+    background: transparent;
+    border: 0;
+    border-radius: 4px;
+    padding: 4px 5px;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    z-index: 99;
+}
+
+.btn-copy svg {
+    fill: #0a4b78;
+    width: 20px;
+    height: auto;
+    transition: all 300ms;
+}
+
+.btn-copy.success svg {
+    fill: #22bf2f;
+}
