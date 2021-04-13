@@ -13,7 +13,7 @@
  * @package           Iautom8_Cc
  *
  * @wordpress-plugin
- * Plugin Name:       Matt's Plugin
+ * Plugin Name:       Leads Fund Integration
  * Plugin URI:        https://i-autom8.com
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
@@ -21,7 +21,7 @@
  * Author URI:        https://i-autom8.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       iautom8-cc
+ * Text Domain:       iautom8-leadsfund
  * Domain Path:       /languages
  */
 
@@ -99,6 +99,7 @@ function include_field_types_unique_id( $version ) {
 
 add_action('acf/include_field_types', 'include_field_types_unique_id');
 
+require_once __DIR__ . '/acf-fields.php';
 
 /**
  * Begins execution of the plugin.
